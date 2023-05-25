@@ -45,6 +45,11 @@ position: fixed;
 top: 10px;
 left: 50%;
 }
+.relative{
+    position: relative;
+    top: 20px;
+    left: 50px;
+}
 
 p{
 font: 18px/1.125rem  sans-serif;
