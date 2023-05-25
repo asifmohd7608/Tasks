@@ -1,0 +1,20 @@
+.float{
+    width: 150px;
+    height: 200px;
+    float: right;
+    margin: 10px;
+    text-align: center;
+    background-color: aquamarine;
+}
+.para1{
+    background-color:burlywood;
+}
+
+.para2{
+    /* clear: right; */
+}
+.container{
+    padding: 10px;
+    background-color: antiquewhite;
+    /* display: flow-root; */
+}

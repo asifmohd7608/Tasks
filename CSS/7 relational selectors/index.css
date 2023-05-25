@@ -1,0 +1,12 @@
+h1~div{
+    background-color: antiquewhite;
+}
+div+section{
+    background-color: burlywood;
+}
+h1 ~h2{
+    color: coral;
+}
+.sample+h2{
+    color: cornflowerblue;
+}

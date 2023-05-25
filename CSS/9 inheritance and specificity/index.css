@@ -1,0 +1,25 @@
+#heading{
+    color:darkolivegreen
+}
+
+h1{
+    color: brown;
+}
+.container{
+    width: 100px;
+    height: 100px;
+    border:2px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sample_div{
+    all: inherit;
+    width: 50px;
+    height: 50px; 
+}
+
+.container>div{
+    border-color: blue;
+}

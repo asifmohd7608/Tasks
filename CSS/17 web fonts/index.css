@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'bitcheeseregular';
+    src: url('./bitcheese-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.para1 {
+    font-family: 'Poppins', sans-serif;
+}
+.para2_woff{
+    font-family: 'bitcheeseregular' , sans-serif;
+}

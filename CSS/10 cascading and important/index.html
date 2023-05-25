@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascading and Important</title>
+    <link rel="stylesheet" href="./index.css">
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+        h1{
+            color: blue;
+        }
+        
+    </style>
+    
+</head>
+<body style="background-color: rgb(160, 207, 191);">
+    <h1 style="color: brown;">Cascading and Important</h1>
+    <p>According to cascading rules, the order of priority is as below</p>
+    <table>
+        <thead align="left">
+            <tr>
+                <th>Priority</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>1</td>
+            <td>Inline Css</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>External and Internal Css</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Broser Default</td>
+        </tr>
+    </table>
+
+    <p>if multiple styles of same priority is defined , then last one will win. <code>!Important</code> will have the highest priority overall</p>
+</body>
+</html>

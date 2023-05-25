@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validations</title>
+</head>
+<body>
+    <h1>Form</h1>
+    <form action="" method="post">
+    <label for="userName">Enter Username</label>
+    <input type="text" id="userName" required><br><br>
+    <label for="mail">Enter Email</label>
+    <input type="email" id="mail" required><br><br>
+    <label for="password">Enter Password</label>&nbsp;
+    <input type="password" id="password" required><br><br>
+    <label for="age">Enter Age</label>&nbsp;
+    <input type="number" min="18" max="120" required><br><br>
+    <label for="phonenumber">Enter Phone Number</label>
+    <input type="tel" required pattern="[0-9]{10}"><br>
+    <small>Format : 9876543210</small><br>
+    <button type="submit">submit</button>
+    </form>
+</body>
+</html>

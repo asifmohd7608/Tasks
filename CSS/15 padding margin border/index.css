@@ -1,0 +1,10 @@
+.container{
+    width: fit-content;
+    height: fit-content;
+    padding: 50px 10em 10% 1rem;
+    background-color: burlywood;
+    border: 5px solid black;
+    border-bottom: dotted;
+    border-width: 2px 4px 6px 8px;
+    margin: 10px 20px 30px 40px;
+}

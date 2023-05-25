@@ -1,0 +1,9 @@
+div p{
+    color: brown;
+}
+.container span{
+    color: blue;
+}
+p span{
+    color: rgb(17, 213, 219);
+}

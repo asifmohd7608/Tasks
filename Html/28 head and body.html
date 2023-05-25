@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Head and Body</title>
+    <base href="./">
+    <style>
+        h1{
+            color:brown
+        }
+    </style>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body onblur="change()" onload="check()" onfocus="getdata()">
+    <h1 >Head and Body</h1>
+
+    <p>the head element contains information like title, style sheets, scripts</p>
+    <p>the body element represents the content</p>
+    <p>there can be only one body element in a document</p>
+    <a href="19 responsive images.html">responsive images</a>
+</body>
+
+<script>
+    const change=()=>{
+        console.log('changed')
+    }
+    const check=()=>{
+       alert('welcome')
+    }
+    const getdata=()=>{
+        console.log('data fetched')
+    }
+</script>
+</html>

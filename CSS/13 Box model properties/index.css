@@ -1,0 +1,10 @@
+.box{
+    box-sizing: border-box;
+    background-color: burlywood;
+    width: 200px;
+    height: 200px;
+    border: 10px solid red;
+    padding: 20px;
+    margin: 40px;
+    font-size: 3rem;
+}

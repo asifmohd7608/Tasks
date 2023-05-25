@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aria Roles</title>
+</head>
+<body>
+    <h1>Aria Roles</h1>
+
+    <p>Aria roles provide semantic meaning to content, allowing screen readers and other tools to present and support
+    interaction with object in a way that is consistent with user expectations of that type of object</p>
+    
+    <h2>There are 6 categories of aria roles</h2>
+    <ol>
+        <li>Document structure roles : provides a structural description for a section of content. eg:- toolbar</li>
+        <li>Widget roles : used to define common interactive patterns, rquires js interaction. eg:- searchbox</li>
+        <li>Landmark roles : provides a way to understand the structure of the page. eg:- search </li>
+        <li>live region roles : used to define elements whose contents will be dynamically changed. eg:- alert</li>
+        <li>Window roles : used to define sub windows to the main document windows. eg:- modal</li>
+        <li>Abstract roles : given by browsers</li>
+
+    </ol>
+
+    <h3>Examples</h3>
+
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA" role="button">this</a> link will be treated as a button by the assistive technology since the <b>role</b> attribute is set as button</p>
+
+    <form role="search">
+        <label for="searchBox">search this site</label>
+        <input type="text" id="searchBox" placeholder="role = search">
+    </form>
+
+    <p>timer with role = timer</p>
+    <div role="timer">0</div>
+</body>
+ 
+</html>

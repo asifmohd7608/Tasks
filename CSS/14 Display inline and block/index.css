@@ -1,0 +1,15 @@
+.block{
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-color: burlywood;
+    border: 2px solid blue;
+}
+
+.inline{
+    display: inline;
+    width: 200px; /* display inline elements doesnt respect width and height */
+    height: 200px;
+    background-color: rgb(24, 231, 35);
+    border: 2px solid blue;
+}

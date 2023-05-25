@@ -1,0 +1,7 @@
+h1+h2{
+    text-decoration: red underline wavy 1px;
+}
+h2+h2{
+    text-decoration: rgb(63, 28, 121) underline overline dashed 2px;
+    /* shorthand : color line style thickness */
+}
