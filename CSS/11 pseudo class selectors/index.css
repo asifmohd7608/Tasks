@@ -13,3 +13,26 @@ h1:hover{
 h2:nth-of-type(2n+1){
     color: burlywood;
 }
+.wrapper{
+    padding: 0;
+}
+.wrapper::before{
+    display: block;
+    content: '';
+    width: 100px;
+    height: 4px;
+    background-color: brown;
+}
+.wrapper::after{
+    display: block;
+    content: '';
+    width: 200px;
+    height: 10px;
+    background-color: rgb(19, 140, 177);
+}
+h3::first-letter{
+    color: rgb(210, 30, 60);
+}
+li::marker{
+    content: '~ ';
+}

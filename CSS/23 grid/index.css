@@ -1,0 +1,139 @@
+.grid {
+  display: grid;
+  grid-template-rows: repeat(2, 100px);
+  grid-template-columns: repeat(2, 100px);
+  gap: 1rem;
+  width: fit-content;
+  border: 2px solid blue;
+}
+.item {
+  background: rgb(20, 250, 227);
+  border: 2px solid black;
+}
+.grid_implicit {
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  grid-template-rows: repeat(2, 100px);
+  grid-auto-rows: 300px; /* to size implicitly added rows*/
+  grid-auto-columns: 200px;/* to size implicitly added columns*/
+  grid-auto-flow: column; /* to specify where implicitly added items to be placed*/
+  gap: 1rem;
+  width: fit-content;
+  border: 2px solid blue;
+}
+.grid_container{
+    display:grid;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: repeat(4,100px);
+}
+.item1{
+   grid-column: 1/3; 
+   grid-row: 1/span 2;
+}
+.item2{
+grid-column: span 2/5;
+grid-row: 1/4;
+}
+.item3{
+grid-column: 1/3;
+}
+.item4{
+grid-column: 1/span 3;
+}
+.item5{
+    grid-column: 4/5;
+}
+.grid_container_2{
+  display: grid;
+  grid-template-columns: repeat(2,100px);
+  grid-auto-rows: 100px;
+  grid-template-areas: 
+  "one two"
+  "three four";
+  width: fit-content;
+  height: fit-content;
+  border: 2px solid black;
+}
+.grid_item_1{
+  grid-area: 'one';
+}
+.grid_item_1{
+  grid-area: 'two';
+}
+.grid_item_1{
+  grid-area: 'three';
+}
+.grid_item_1{
+  grid-area: 'four';
+}
+.align_items_start{
+  align-items: flex-start;
+}
+.align_items_end{
+  align-items: flex-end;
+}
+.align_items_center{
+  align-items: center;
+}
+.align_items_stretch{
+  align-items: stretch;
+}
+.align_items_baseline{
+  align-items: baseline;
+}
+.baseline_1{
+  height: 60px;
+  padding-top: 20px;
+}
+.baseline_4{
+height: 40px;
+padding-top: 40px;
+}
+.align_self_start{
+  align-self: flex-start;
+}
+.align_self_end{
+  align-self: flex-end;
+}
+.align_self_center{
+  align-self: center;
+}
+.align_self_stretch{
+  align-self: stretch;
+}
+
+.justify_items_start{
+  justify-items:flex-start
+}
+.justify_items_end{
+  justify-items: flex-end;
+}
+.justify_items_center{
+  justify-items: center;
+}
+.justify_items_stretch{
+  justify-items: stretch;
+}
+.justify_items_baseline{
+  justify-items: first baseline;
+}
+
+
+.justify_self_start{
+  justify-self: flex-start;
+}
+.justify_self_end{
+  justify-self: flex-end;
+}
+.justify_self_center{
+  justify-self: center;
+}
+.justify_self_stretch{
+  justify-self: stretch;
+}
+.justify_self_baseline_last{
+  justify-self: last baseline;
+}
+.justify_self_baseline_first{
+  justify-self: first baseline;
+}

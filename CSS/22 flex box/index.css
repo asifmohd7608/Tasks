@@ -1,4 +1,6 @@
-
+h2{
+    color: rgb(206, 14, 14);
+}
 .wrapper{
     display: flex;
     flex-wrap: wrap;
@@ -10,7 +12,6 @@
     width: 600px;
     height: 150px;
     border: 2px solid black;
-    padding: 10px;
 }
 .flex_item{
     width: 50px;
@@ -27,6 +28,21 @@
 .item3{
     background-color: cornflowerblue;
 }
+.row{
+    flex-direction: row;
+}
+.row_reverse{
+    flex-direction: row-reverse;
+}
+.column{
+    flex-direction: column;
+}
+.column_reverse{
+    flex-direction: column-reverse;
+}
+
+
+
 
 .flex_start{
     justify-content: flex-start;
@@ -65,4 +81,68 @@ align-items: baseline;
     width: 50px;
     border: 2px solid black;
 }
+.self_stretch{
+    align-self: stretch;
+}
+.self_start{
+    align-self: flex-start;
+}
+.self_end{
+    align-self: flex-end;
+}
+.self_center{
+    align-self: center;
+}
+.flex_item_1{
+width: 50px;
+height: 50px;
+text-align: center;
+padding: 40px 0;
+border: 2px solid black;
+}
+.flex_item_2{
+width: 70px;
+min-height: 70px;
+border: 2px solid black;
+}
+.flex_item_3{
+width: 30px;
+height: 40px;
+border: 2px solid black;
+}
+.order_2{
+    order: 2;
+}
+.order_1{
+    order: 1;
+}
+.order_3{
+    order: 3;
+}
 
+.flex_container_2{
+display: flex;
+height: 300px;
+width: 50px;
+flex-wrap: wrap;
+border: 2px solid black;
+}
+
+.content_start{
+    align-content: flex-start;
+}
+.content_end{
+    align-content: flex-end;
+}
+.content_center{
+    align-content: center;
+}
+.content_between{
+    align-content: space-between;
+}
+.content_around{
+    align-content: space-around;
+}
+.content_evenly{
+    align-content: space-evenly;
+}

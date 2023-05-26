@@ -1,107 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flex Box</title>
-    <link rel="stylesheet" href="./index.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
     <h1>Flex Box</h1>
-<h2>Justify Content</h2>
-
+    <h2>Flex Direction</h2>
     <div class="wrapper">
-        <div>
-            <h3>flex-start</h3>
-            <div class="flex_container flex_start">
-                <div class="flex_item item1"></div>
-                <div class="flex_item item2"></div>
-                <div class="flex_item item3"></div>
-            </div>
+      <div>
+        <h3>row</h3>
+        <div class="flex_container row">
+          <div class="flex_item item1">1</div>
+          <div class="flex_item item2">2</div>
+          <div class="flex_item item3">3</div>
         </div>
-        <div>
-            <h3>flex-end</h3>
-            <div class="flex_container flex_end">
-                <div class="flex_item item1"></div>
-                <div class="flex_item item2"></div>
-                <div class="flex_item item3"></div>
-            </div>
+      </div>
+      <div>
+        <h3>row reverse</h3>
+        <div class="flex_container row_reverse">
+          <div class="flex_item item1">1</div>
+          <div class="flex_item item2">2</div>
+          <div class="flex_item item3">3</div>
         </div>
-        <div><h3>center</h3>
+      </div>
+      <div>
+        <h3>column</h3>
+        <div class="flex_container column">
+          <div class="flex_item item1">1</div>
+          <div class="flex_item item2">2</div>
+          <div class="flex_item item3">3</div>
+        </div>
+      </div>
+      <div>
+        <h3>column reverse</h3>
+        <div class="flex_container column_reverse">
+          <div class="flex_item item1">1</div>
+          <div class="flex_item item2">2</div>
+          <div class="flex_item item3">3</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Justify Content</h2>
+    <div class="wrapper">
+      <div>
+        <h3>flex-start</h3>
+        <div class="flex_container flex_start">
+          <div class="flex_item item1"></div>
+          <div class="flex_item item2"></div>
+          <div class="flex_item item3"></div>
+        </div>
+      </div>
+      <div>
+        <h3>flex-end</h3>
+        <div class="flex_container flex_end">
+          <div class="flex_item item1"></div>
+          <div class="flex_item item2"></div>
+          <div class="flex_item item3"></div>
+        </div>
+      </div>
+      <div>
+        <h3>center</h3>
         <div class="flex_container center">
-            <div class="flex_item item1"></div>
-            <div class="flex_item item2"></div>
-            <div class="flex_item item3"></div>
-        </div></div>
-        <div>
-            <h3>Space Between </h3>
-            <div class="flex_container space_between">
-                <div class="flex_item item1"></div>
-                <div class="flex_item item2"></div>
-                <div class="flex_item item3"></div>
-            </div>
+          <div class="flex_item item1"></div>
+          <div class="flex_item item2"></div>
+          <div class="flex_item item3"></div>
         </div>
-    <div>
+      </div>
+      <div>
+        <h3>Space Between</h3>
+        <div class="flex_container space_between">
+          <div class="flex_item item1"></div>
+          <div class="flex_item item2"></div>
+          <div class="flex_item item3"></div>
+        </div>
+      </div>
+      <div>
         <h3>Space Around</h3>
         <div class="flex_container space_around">
-            <div class="flex_item item1"></div>
-            <div class="flex_item item2"></div>
-            <div class="flex_item item3"></div>
+          <div class="flex_item item1"></div>
+          <div class="flex_item item2"></div>
+          <div class="flex_item item3"></div>
         </div>
-    </div>
-    <div>
+      </div>
+      <div>
         <h3>Space Evenly</h3>
         <div class="flex_container space_evenly">
-            <div class="flex_item item1"></div>
-            <div class="flex_item item2"></div>
-            <div class="flex_item item3"></div>
+          <div class="flex_item item1"></div>
+          <div class="flex_item item2"></div>
+          <div class="flex_item item3"></div>
         </div>
+      </div>
     </div>
+
     <h2>Align Items</h2>
-    <div>
+    <div class="wrapper">
+      <div>
         <h3>Flex Start</h3>
         <div class="flex_container align_start">
-            <div class="flex_item item1"></div>
-            <div class="flex_item item2"></div>
-            <div class="flex_item item3"></div>
+          <div class="flex_item item1"></div>
+          <div class="flex_item item2"></div>
+          <div class="flex_item item3"></div>
         </div>
-    </div>
-    <div>
+      </div>
+      <div>
         <h3>Flex End</h3>
         <div class="flex_container align_end">
-            <div class="flex_item item1"></div>
-            <div class="flex_item item2"></div>
-            <div class="flex_item item3"></div>
+          <div class="flex_item item1"></div>
+          <div class="flex_item item2"></div>
+          <div class="flex_item item3"></div>
         </div>
-    </div>
-    <div>
+      </div>
+      <div>
         <h3>Center</h3>
         <div class="flex_container align_center">
-            <div class="flex_item item1"></div>
-            <div class="flex_item item2"></div>
-            <div class="flex_item item3"></div>
+          <div class="flex_item item1"></div>
+          <div class="flex_item item2"></div>
+          <div class="flex_item item3"></div>
         </div>
-    </div>
-    <div>
+      </div>
+      <div>
         <h3>Stretch</h3>
         <div class="flex_container align_stretch">
-            <div class="flex_item_stretch item1"></div>
-            <div class="flex_item_stretch item2"></div>
-            <div class="flex_item_stretch item3"></div>
+          <div class="flex_item_stretch item1"></div>
+          <div class="flex_item_stretch item2"></div>
+          <div class="flex_item_stretch item3"></div>
         </div>
-    </div>
-    <div>
+      </div>
+      <div>
         <h3>Baseline</h3>
         <div class="flex_container align_baseline">
-            <div class="flex_item item1 ">base</div>
-            <div class="flex_item item2 "></div>
-            <div class="flex_item item3"></div>
+          <div class="flex_item_1 item1">base</div>
+          <div class="flex_item_2 item2">base</div>
+          <div class="flex_item_3 item3">base</div>
         </div>
-    </div>
-    
-
+      </div>
     </div>
 
-</body>
+    <h2>Align Self</h2>
+    <div class="wrapper">
+      <div>
+        <h3>Stretch</h3>
+        <div class="flex_container align_center">
+          <div class="flex_item item1"></div>
+          <div class="flex_item_stretch item2 self_stretch">stretch</div>
+          <div class="flex_item item3"></div>
+        </div>
+      </div>
+      <div>
+        <h3>Flex Start</h3>
+        <div class="flex_container align_end">
+          <div class="flex_item item1"></div>
+          <div class="flex_item item2 self_start">start</div>
+          <div class="flex_item item3"></div>
+        </div>
+      </div>
+      <div>
+        <h3>Flex End</h3>
+        <div class="flex_container align_start">
+          <div class="flex_item item1"></div>
+          <div class="flex_item item2 self_end">end</div>
+          <div class="flex_item item3"></div>
+        </div>
+      </div>
+      <div>
+        <h3>Flex center</h3>
+        <div class="flex_container align_start">
+          <div class="flex_item item1"></div>
+          <div class="flex_item item2 self_center">center</div>
+          <div class="flex_item item3"></div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Order</h2>
+    <div class="wrapper">
+      <div class="flex_container">
+        <div class="flex_item item1 order_3">1</div>
+        <div class="flex_item item2 order_1">2</div>
+        <div class="flex_item item3 order_2">3</div>
+      </div>
+    </div>
+    <h2>Align Content</h2>
+    <div class="wrapper">
+      <div>
+        <h3>start</h3>
+        <div class="flex_container_2 content_start">
+          <div class="flex_item item1"></div>
+          <div class="flex_item item2"></div>
+          <div class="flex_item item3"></div>
+        </div>
+      </div>
+
+      <div>
+        <h3>end</h3>
+        <div class="flex_container_2 content_end">
+          <div class="flex_item item1"></div>
+          <div class="flex_item item2"></div>
+          <div class="flex_item item3"></div>
+        </div>
+      </div>
+      <div>
+        <h3>center</h3>
+        <div class="flex_container_2 content_center">
+          <div class="flex_item item1"></div>
+          <div class="flex_item item2"></div>
+          <div class="flex_item item3"></div>
+        </div>
+      </div>
+      <div>
+        <h3>space between</h3>
+        <div class="flex_container_2 content_between">
+          <div class="flex_item item1"></div>
+          <div class="flex_item item2"></div>
+          <div class="flex_item item3"></div>
+        </div>
+      </div>
+      <div>
+        <h3>space around</h3>
+        <div class="flex_container_2 content_around">
+          <div class="flex_item item1"></div>
+          <div class="flex_item item2"></div>
+          <div class="flex_item item3"></div>
+        </div>
+      </div>
+      <div>
+        <h3>space evenly</h3>
+        <div class="flex_container_2 content_evenly">
+          <div class="flex_item item1"></div>
+          <div class="flex_item item2"></div>
+          <div class="flex_item item3"></div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
