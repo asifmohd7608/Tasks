@@ -1,0 +1,34 @@
+*{
+    box-sizing: border-box;
+}
+.box{
+    background: url(./mar-bustos-HsEz1XZ1TO8-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+.box>h2{
+    width: fit-content;
+    margin-inline: auto;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 5rem;
+   
+}
+.box>p{
+    width: fit-content;
+    margin-inline: auto;
+    font-size: 3rem;
+    color: hsla(340, 100%, 50%, 0.8);
+}
+.box_inside{
+    width: 400px;
+    height: 100px;
+    background-color: hsla(40, 20%, 50%, 0.5);
+    padding: 20px;
+}
+.box_inside>h2{
+    width: fit-content;
+    margin-inline: auto;
+    color: hsla(80, 90%, 80%, 0.8);
+}

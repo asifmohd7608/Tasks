@@ -1,0 +1,27 @@
+.box{
+    background-color: rgb(3, 3, 139);
+    width: 200px;
+    height: 200px;
+    margin-inline: auto;
+    border-radius: 15px 29px 112px 50px;
+}
+.box_2{
+    margin-top: 2rem;
+    background-color: rgb(87, 15, 116);
+    width: 200px;
+    height: 200px;
+    margin-inline: auto;
+    border-radius: 70px/120px;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 100px;
+}
+.box_3{
+    margin-top: 2rem;
+    background-color: rgb(87, 15, 116);
+    width: 200px;
+    height: 200px;
+    margin-inline: auto;
+    border-radius: 300px/400px;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+}

@@ -1,0 +1,12 @@
+div {
+ overflow: hidden;
+  resize: both;
+}
+div>p{
+    overflow: hidden;
+  resize: horizontal;
+}
+.para1{
+    overflow: auto;
+    resize: vertical;
+}

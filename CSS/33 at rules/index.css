@@ -1,0 +1,18 @@
+@import url(./styles.css);
+@font-face {
+  font-family: "bitcheeseregular";
+  src: url("./bitcheese-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen {
+  h2 {
+    font-family: "bitcheeseregular";
+    color: antiquewhite;
+  }
+}
+@media print {
+  h2 {
+    color: brown;
+  }
+}

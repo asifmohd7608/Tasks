@@ -1,0 +1,15 @@
+/* 
+*{
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+} */
+.box{
+    height:80vh;
+    padding: 20px;
+    background: url(./transparent-lighthouse-blue-lighthouse-lighthouse-blue-waterc-6473f6d0601a85.6351894216853214243936.png),url(./mar-bustos-HsEz1XZ1TO8-unsplash.jpg) ;
+    background-size: contain,cover;
+    background-repeat: no-repeat;
+    background-position: 800px 45px,center;
+    background-origin: border-box;
+}

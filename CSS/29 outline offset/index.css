@@ -1,0 +1,26 @@
+.container{
+    border: 2px solid brown;
+    width: fit-content;
+    padding: 10px;
+    margin-inline: auto;
+    outline: 4px solid blue;
+    outline-offset: 10px;
+}
+.container_2{
+    margin-top: 50px;
+    border: 2px solid rgb(106, 190, 216);
+    width: 200px;
+    padding: 10px;
+    margin-inline: auto;
+    outline: 8px solid rgb(230, 201, 106);
+    outline-offset: 10px;
+}
+.container_3{
+    margin-top: 50px;
+    border: 2px solid rgb(133, 31, 119);
+    width: 200px;
+    padding: 10px;
+    margin-inline: auto;
+    outline: 4px dashed rgb(223, 131, 56);
+    outline-offset: 10px;
+}

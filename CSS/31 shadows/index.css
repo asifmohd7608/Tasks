@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    margin-inline: auto;
+    border-radius: 8px;
+    box-shadow: 7px 7px 10px 2px rgb(128, 124, 124);
+}
+.box_2{
+    margin-top: 4rem;
+    width: 200px;
+    height: 200px;
+    padding: 50px;
+    margin-inline: auto;
+    border-radius: 8px;
+    border: 1px solid rgb(167, 164, 164);
+    box-shadow: inset 10px 7px 10px 2px rgb(128, 124, 124);
+    
+}
+.box_2>h2{
+    text-shadow: 10px 7px 4px rgb(128, 124, 124);
+    width: fit-content;
+}

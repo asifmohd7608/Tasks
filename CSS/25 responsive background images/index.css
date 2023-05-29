@@ -4,4 +4,16 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
+  text-align: center;
+
+}
+h2{
+  color: rgb(255, 255, 255);
+width: fit-content;
+margin-inline: auto;
+margin-top: max(20%,200px);
+font-size: 3rem;
+text-decoration: overline underline 10px red ;
+text-underline-offset: 15px;
+line-height: 5rem;
 }

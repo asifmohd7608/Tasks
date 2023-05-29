@@ -1,0 +1,11 @@
+input[type=text]{
+    width: 400px;
+    outline: 2px solid green;
+    
+}
+input[type^=text]:focus{
+    outline: 2px solid blue;
+}
+label[for=username]:hover{
+    color: crimson;
+}
