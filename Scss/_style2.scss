@@ -1,0 +1,12 @@
+
+@forward 'style3';
+
+$color: rgb(252, 95, 95);
+$blur: 5px;
+$spread: 2px;
+@mixin box-shadow($x: 10px, $y: 10px, $blur:5px, $spread:1px,$color:black) {
+  box-shadow: $x $y $blur $spread;
+}
+
+
+
