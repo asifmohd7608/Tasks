@@ -1,0 +1,125 @@
+*body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+.navbar {
+  max-width: 1100px;
+  padding: 20px 0;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  a {
+    text-decoration: none;
+    &:visited {
+      color: inherit;
+    }
+  }
+  .nav_left,
+  .nav_right,
+  .nav_links,
+  .nav_book,
+  .intro {
+    display: flex;
+    align-items: center;
+  }
+  .nav_links {
+    color: rgb(112, 110, 110);
+    font-size: 0.8rem;
+    font-weight: 500;
+    gap: 20px;
+  }
+  .nav_left {
+    gap: 80px;
+  }
+  .nav_right {
+    gap: 20px;
+    & > div:nth-of-type(1) {
+      color: rgb(112, 110, 110);
+      font-size: 0.8rem;
+      font-weight: 500;
+      border-right: 1px solid rgb(100, 99, 99);
+      padding-right: 10px;
+    }
+    .nav_book {
+      gap: 30px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.25px;
+      color: rgb(65, 63, 63);
+      & > div:nth-of-type(1) {
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
+      > .book_now_btn {
+        border: 1px solid rgb(61, 60, 60);
+        border-radius: 20px;
+        padding: 8px 12px;
+      }
+    }
+  }
+}
+.intro {
+  max-width: 900px;
+  display: flex;
+  justify-content: space-around;
+  margin: 40px auto;
+  text-align: center;
+  > .intro_tag {
+    h1 {
+      color: rgb(54, 53, 53);
+    }
+    .intro_span {
+      text-decoration: underline 3px rgb(238, 223, 13);
+      text-underline-offset: 15px;
+      .intro_bold {
+        font-weight: 900;
+      }
+    }
+  }
+
+  > .intro_right {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: rgb(65, 63, 63);
+    > div:nth-of-type(1) {
+      text-align: left;
+    }
+    > div:nth-of-type(2) {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: rgb(65, 63, 63);
+    }
+    .intro_right_yellow-bg {
+      background-color: rgb(238, 223, 13);
+      padding: 10px 20px;
+      border-radius: 20px;
+    }
+    a {
+      text-decoration: underline 2px solid rgb(83, 82, 82);
+      text-underline-offset: 3px;
+      &:visited {
+        color: inherit;
+      }
+    }
+  }
+}
+.hero_image {
+  height: fit-content;
+  margin-top: 8rem;
+  overflow: hidden;
+  > img {
+    object-fit: cover;
+    width: 100%;
+  }
+}
+.gradient{
+    margin: 0;
+    min-height: 200px;
+    background: linear-gradient(rgba(15, 17, 14, 0.884),rgb(10, 12, 9));
+    
+}

@@ -1,20 +1,22 @@
-.float{
-    width: 150px;
-    height: 200px;
-    float: right;
-    margin: 10px;
-    text-align: center;
-    background-color: aquamarine;
+.float {
+  width: 150px;
+  height: 200px;
+  float: right;
+  margin: 10px;
+  text-align: center;
+  background-color: aquamarine;
 }
-.para1{
-    background-color:burlywood;
+.para1 {
+  background-color: burlywood;
+  text-align: justify;
 }
 
-.para2{
-    /* clear: right; */
+.para2 {
+  /* clear: right; */
+  text-align: justify;
 }
-.container{
-    padding: 10px;
-    background-color: antiquewhite;
-    /* display: flow-root; */
+.container {
+  padding: 10px;
+  background-color: antiquewhite;
+  /* display: flow-root; */
 }

@@ -1,0 +1,6 @@
+@use 'sass:map';
+
+
+@function size($size){
+    @return map-get($map: $font-sizes, $key: $size)
+}

@@ -1,0 +1,16 @@
+// @use './variables' as var;
+
+@mixin flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin box($width: 200px, $height: 200px, $borderColor: rgb(182, 182, 182)) {
+  width: $width;
+  min-height:$height;
+  border: 2px solid $borderColor;
+}
+@mixin box-shadow($x: 10px, $y: 10px, $blur: 5px, $spread: 1px, $color: black) {
+  box-shadow: $x $y $blur $spread;
+}
