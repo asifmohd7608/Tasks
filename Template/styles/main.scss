@@ -1,3 +1,5 @@
+@use "./mixins";
+
 *body {
   box-sizing: border-box;
   padding: 0;
@@ -6,13 +8,15 @@
 }
 .container {
   max-width: 1346px;
+  margin-inline: auto;
 }
 .navbar {
   max-width: 1100px;
-  padding: 20px 0;
+  padding: 20px 10px;
   margin-inline: auto;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   a {
     text-decoration: none;
     &:visited {
@@ -28,9 +32,7 @@
     align-items: center;
   }
   .nav_links {
-    color: rgb(112, 110, 110);
-    font-size: 0.8rem;
-    font-weight: 500;
+    @include mixins.font_small-gray;
     gap: 20px;
   }
   .nav_left {
@@ -39,9 +41,7 @@
   .nav_right {
     gap: 20px;
     & > div:nth-of-type(1) {
-      color: rgb(112, 110, 110);
-      font-size: 0.8rem;
-      font-weight: 500;
+      @include mixins.font_small-gray;
       border-right: 1px solid rgb(100, 99, 99);
       padding-right: 10px;
     }
@@ -64,11 +64,13 @@
   }
 }
 .intro {
-  max-width: 900px;
+  max-width: 1000px;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   margin: 40px auto;
   text-align: center;
+  align-items: baseline;
   > .intro_tag {
     h1 {
       color: rgb(54, 53, 53);
@@ -93,9 +95,7 @@
       display: flex;
       align-items: center;
       gap: 30px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: rgb(65, 63, 63);
+      @include mixins.font_small-gray($color: rgb(65, 63, 63));
     }
     .intro_right_yellow-bg {
       background-color: rgb(238, 223, 13);
@@ -123,17 +123,19 @@
 }
 .gradient {
   margin-top: -5px;
-  min-height: 200px;
-  padding: 4rem 0;
+  min-height: 150px;
+  padding: 4rem 6rem;
   background: linear-gradient(rgba(17, 19, 16, 0.85), rgba(18, 22, 17));
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(10.5px);
 
   > .score_container {
     display: flex;
-    justify-content: space-between;
-    max-width: 900px;
+    justify-content: space-around;
+    max-width: 1000px;
     margin-inline: auto;
+    padding: 0 1rem;
+    flex-wrap: wrap;
     > .card {
       width: 150px;
       //   border: 2px solid black;
@@ -160,16 +162,273 @@
   }
 }
 .achievements {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 3rem auto;
+  padding: 0 1rem;
   > .achievements_header {
     font-size: 1.6rem;
-    font-weight: 600;
+    font-weight: 700;
     color: rgb(43, 42, 42);
     text-align: center;
   }
   span {
     text-decoration: underline 3px rgb(238, 223, 13);
     text-underline-offset: 10px;
+  }
+  > .achievements_para {
+    text-align: center;
+    @include mixins.font_small-gray();
+  }
+  > .achievements_grid {
+    margin: 5rem 10rem; /* check here*/
+    padding: 0 1rem;
+    text-align: center;
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+    .achievements_icon {
+      max-width: 40px;
+    }
+    h4 {
+      @include mixins.font_small-gray(
+        $size: 0.9rem,
+        $weight: 700,
+        $color: rgb(58, 57, 57)
+      );
+    }
+    p {
+      @include mixins.font_small-gray;
+    }
+  }
+}
+.steps_wrapper {
+  max-width: 1000px;
+  min-height: 300px;
+  position: relative;
+  margin-inline: auto;
+  text-align: center;
+
+  > .steps_container {
+    padding: 4rem 6rem;
+  }
+  > .steps_background {
+    position: absolute;
+    z-index: -1;
+    background-color: rgba(227, 237, 247, 0.856);
+    width: 100%;
+    min-height: 50%;
+  }
+  .steps_intro {
+    max-width: 500px;
+    margin-inline: auto;
+    h3 {
+      @include mixins.font_small-gray(1.3rem, 700, rgb(39, 39, 39));
+    }
+    p {
+      @include mixins.font_small-gray;
+    }
+  }
+  .steps_flex {
+    margin: 4rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    > div {
+      max-width: 300px;
+      text-align: left;
+      line-height: 1.4rem;
+      > .placeholder_text_container {
+        @include mixins.font_small-gray(1rem, 700, rgb(68, 67, 67));
+        padding: 0 10px;
+        > .steps_header_para {
+          @include mixins.font_small-gray;
+        }
+      }
+      > .placeholder_container {
+        height: 210px;
+        overflow: hidden;
+        > img {
+          object-fit: cover;
+          object-position: center;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .steps_button {
+    background-color: rgb(226, 211, 5);
+    border: none;
+    padding: 1em 2em;
+    border-radius: 20px;
+    @include mixins.font_small-gray(0.7rem, 600, rgb(61, 60, 60));
+    &:hover {
+      background-color: rgb(206, 193, 7);
+      cursor: pointer;
+    }
+  }
+}
+.breaker_line {
+  height: 2px;
+  width: 100%;
+  background-color: rgb(226, 223, 223);
+}
+.testimonials {
+  min-height: 100px;
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  > .testimonials_header {
+    max-width: 450px;
+    padding: 0 6rem;
+    height: fit-content;
+    & > p {
+      @include mixins.font_small-gray(1.4rem, 800, rgb(54, 53, 53));
+      line-height: 1rem;
+      > .star {
+        color: green;
+        font-size: 2rem;
+        & + span {
+          font-size: 1.5 rem;
+          font-weight: 600;
+        }
+      }
+      > .underline {
+        text-decoration: 3px underline rgb(206, 193, 7);
+        text-underline-offset: 13px;
+      }
+    }
+    & > p:nth-of-type(1) {
+      @include mixins.font_small-gray;
+    }
+  }
+  > .testimonials_card_container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 6rem;
+    > .testimonial_card {
+      width: 250px;
+      height: fit-content;
+      padding: 1rem 2rem;
+      border: 1px solid rgba(158, 157, 157, 0.5);
+      border-radius: 5px;
+      transition: box-shadow 200ms, transform 200ms ease-in;
+      &:hover {
+        box-shadow: 0 0 8px 1px;
+        transform: scale(1.001);
+      }
+      > p {
+        @include mixins.font_small-gray($weight: 600);
+        padding: 10px 0;
+        &::before {
+          content: "\201C";
+          display: block;
+          font-size: 2rem;
+        }
+      }
+      > .testimaonial_rating_container {
+        display: flex;
+        border-top: 1px solid rgba(143, 141, 141, 0.5);
+        justify-content: center;
+        align-items: baseline;
+        > .rating {
+          @include mixins.font_small-gray;
+          padding: 1rem 0;
+        }
+        .star {
+          color: green;
+          font-size: 1rem;
+        }
+        > .testimonial_author {
+          @include mixins.font_small-gray(0.7rem, 700, rgb(44, 44, 44));
+          margin-inline: auto;
+        }
+      }
+    }
+  }
+}
+
+.underline {
+  text-decoration: 3px underline rgb(231, 216, 7);
+  text-underline-offset: 10px;
+}
+#advisor_tag {
+  @include mixins.font_small-gray(1.6rem, 700, rgb(46, 45, 45));
+}
+
+.footer {
+  background: rgb(32, 46, 46);
+  padding: 2rem 0;
+  >.footer_grid_container{
+    max-width: 1000px;
+    margin-inline: auto;
+  }
+  .footer_grid_wrapper{
+    padding: 0 6rem;
+  }
+   .footer_grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: left;
+    
+    h4 {
+      color: rgb(214, 213, 213);
+    }
+    .footer_nav_column {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      > div {
+        @include mixins.font_small-gray();
+        font-weight: 600;
+      }
+      > input {
+        padding: 8px 10px;
+        background-color: rgb(32, 46, 46);
+        color: white;
+        border: 1px solid rgb(136, 135, 135);
+        border-radius: 4px;
+        outline: none;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+      input[type="number"] {
+        appearance: textfield;
+        -moz-appearance: textfield;
+      }
+    }
+  }
+}
+
+@media (width<=600px) {
+}
+@media (width<=850px) {
+  .nav_links,
+  .nav_right {
+    visibility: hidden;
+  }
+  .nav_left {
+    //causing overflow
+  }
+  .score_container {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  .steps_flex,
+  .testimonials_card_container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .testimonials_header {
+    margin-inline: auto;
+    text-align: center;
   }
 }
