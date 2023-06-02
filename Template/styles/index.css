@@ -245,8 +245,8 @@
   z-index: -1;
   background-color: rgba(227, 237, 247, 0.856);
   width: 100%;
+  min-height: 52%;
   margin-inline: auto;
-  min-height: 50%;
 }
 .steps_wrapper .steps_intro {
   max-width: 500px;
@@ -265,11 +265,13 @@
 .steps_wrapper .steps_flex {
   margin: 4rem 0;
   display: flex;
+  flex-wrap: wrap;
+  flex: 1;
   justify-content: center;
   gap: 20px;
 }
 .steps_wrapper .steps_flex > div {
-  max-width: 300px;
+  max-width: 250px;
   text-align: left;
   line-height: 1.4rem;
 }
@@ -286,7 +288,27 @@
 }
 .steps_wrapper .steps_flex > div > .placeholder_container {
   height: 210px;
-  overflow: hidden;
+  position: relative;
+}
+.steps_wrapper .steps_flex > div > .placeholder_container .placeholder_number {
+  position: absolute;
+  left: 20px;
+  bottom: -15px;
+  border-radius: 0 4em 0 0;
+  padding: 0.6em 1.1em 0.3em 0.7em;
+  font-weight: 600;
+  color: rgb(68, 68, 68);
+}
+.steps_wrapper .steps_flex > div > .placeholder_container .color1 {
+  background-color: rgb(222, 226, 3);
+}
+.steps_wrapper .steps_flex > div > .placeholder_container .color2 {
+  color: rgb(255, 251, 245);
+  background-color: rgb(81, 99, 102);
+}
+.steps_wrapper .steps_flex > div > .placeholder_container .color3 {
+  color: rgb(250, 244, 235);
+  background-color: rgb(22, 192, 204);
 }
 .steps_wrapper .steps_flex > div > .placeholder_container > img {
   object-fit: cover;
@@ -556,6 +578,9 @@
   .testimonials_card_container {
     flex-direction: column;
     align-items: center;
+  }
+  .steps_flex > div {
+    min-width: 100%;
   }
   .testimonials_header {
     margin-inline: auto;
