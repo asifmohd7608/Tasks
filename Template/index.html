@@ -16,9 +16,9 @@
   <body>
     <div class="container">
       <nav class="navbar">
-        <div class="nav_left">
-          <div class="name">Lanterna</div>
-          <div class="nav_links">
+        <div class="nav_left" role="navigation">
+          <div class="name" role="banner">Lanterna</div>
+          <div class="nav_links" role="navigation">
             <div><a href="./index.html">How it works</a></div>
             <div><a href="./index.html">Tutors</a></div>
             <div><a href="./index.html">Subjects</a></div>
@@ -26,15 +26,17 @@
             <div><a href="./index.html">Why lanterna</a></div>
           </div>
         </div>
-        <div class="nav_right">
+        <div class="nav_right" role="navigation">
           <div><a href="./index.html">Login</a></div>
           <div class="nav_book">
             <div><a href="./index.html">Talk with an advisor</a></div>
-            <div class="book_now_btn"><a href="./index.html">Book now</a></div>
+            <button class="book_now_btn">
+              <a href="./index.html">Book now</a>
+            </button>
           </div>
         </div>
       </nav>
-      <div class="intro">
+      <header class="intro">
         <div class="intro_tag">
           <h1>
             Unlock your potential with<br />online
@@ -47,15 +49,17 @@
         <div class="intro_right">
           <div><p>We are here to get the grades you need</p></div>
           <div>
-            <div class="intro_right_yellow-bg">Get matched with your tutor</div>
+            <button class="intro_right_yellow-bg">
+              Get matched with your tutor
+            </button>
             <div><a href="./index.html">Talk with an advisor</a></div>
           </div>
         </div>
-      </div>
-      <div class="hero_image">
+      </header>
+      <article class="hero_image">
         <img src="./media//mainImage.png" alt="hero image.png" />
-      </div>
-      <div class="gradient">
+      </article>
+      <article class="gradient">
         <div class="score_container">
           <div class="card">
             <div class="person_icon_container">
@@ -85,8 +89,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="achievements">
+      </article>
+      <article class="achievements">
         <div class="achievements_header">
           <p>Your success is our success.</p>
           <p>See why we are trusted <span>by +500 schools</span></p>
@@ -171,8 +175,8 @@
             </p>
           </div>
         </div>
-      </div>
-      <div class="steps_wrapper">
+      </article>
+      <article class="steps_wrapper">
         <div class="steps_background"></div>
         <div class="steps_container">
           <div class="steps_intro">
@@ -224,9 +228,9 @@
           </div>
           <button class="steps_button">Book your online tutoring</button>
         </div>
-      </div>
+      </article>
       <div class="breaker_line"></div>
-      <div class="testimonials">
+      <article class="testimonials">
         <div class="testimonials_header">
           <p>Meet other students</p>
           <p>
@@ -282,8 +286,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="steps_wrapper">
+      </article>
+      <article class="steps_wrapper">
         <div class="steps_container">
           <div class="steps_intro">
             <p id="advisor_tag">
@@ -336,57 +340,87 @@
           </div>
           <button class="steps_button">Book your online tutoring</button>
         </div>
-      </div>
-      <div class="footer">
+      </article>
+      <footer class="footer">
         <div class="footer_grid_container">
           <div class="footer_grid_wrapper">
             <div class="footer_grid">
               <div class="footer_nav_column">
                 <h4>About Lanterna</h4>
-                <div>About us</div>
-                <div>Partners</div>
-                <div>References</div>
-                <div>Tutors</div>
-                <div>Collaborations</div>
-                <div>Work with us</div>
+                <div><a href="./index.html">About us</a></div>
+                <div><a href="./index.html">Partners</a></div>
+                <div><a href="./index.html">References</a></div>
+                <div><a href="./index.html">Tutors</a></div>
+                <div><a href="./index.html">Collaborations</a></div>
+                <div><a href="./index.html">Work with us</a></div>
+                <div class="footer_connect">
+                  <h2>Connect with us</h2>
+                  <div class="footer_icon_flex">
+                    <a href="https//:www.facebook.com"
+                      ><img
+                        class="footer_icon"
+                        src="./media/icons/fb.png"
+                        alt=""
+                    /></a>
+                    <a href="twitter.com"
+                      ><img
+                        class="footer_icon"
+                        src="./media/icons/twitter.png"
+                        alt=""
+                    /></a>
+                  </div>
+                </div>
               </div>
               <div class="footer_nav_column">
                 <h4>For students</h4>
-                <div>Free resources</div>
-                <div>Blogg</div>
-                <div>IB Online tutoring</div>
-                <div>IGCSE tutoring</div>
-                <div>FAQ</div>
-                <div>Terms and conditions</div>
-                <div>Payment</div>
-                <div>Stayinf safe online</div>
+                <div><a href="./index.html">Free resources</a></div>
+                <div><a href="./index.html">Blogg</a></div>
+                <div><a href="./index.html">IB Online tutoring</a></div>
+                <div><a href="./index.html">IGCSE tutoring</a></div>
+                <div><a href="./index.html">FAQ</a></div>
+                <div><a href="./index.html">Terms and conditions</a></div>
+                <div><a href="./index.html">Payment</a></div>
+                <div><a href="./index.html">Staying safe online</a></div>
               </div>
               <form action="./index.html" class="footer_nav_column">
                 <h4>Contact us</h4>
-                <input type="text" placeholder="Name" />
+                <input type="text" placeholder="Name" required />
                 <input
-                  type="number"
-                  pattern="[0-9]10"
+                  type="tel"
+                  pattern="[0-9]{10}"
                   placeholder="Phone number"
-                  name=""
+                  name="phoneNumber"
+                  required
                   id=""
                 />
-                <input type="email" placeholder="Email" name="" id="" />
-                <input type="text" placeholder="Message" />
-                <div>
+                <input
+                  type="email"
+                  placeholder="Email"
+                  name=""
+                  id=""
+                  required
+                />
+                <input type="text" placeholder="Message" required />
+                <div class="footer_radio">
                   <label for="checkbox">I'm the</label>
-                  <input type="radio" name="role" id="student" />
+                  <input type="radio" name="role" id="student" required />
                   <label for="student">Student</label>
                   <input type="radio" name="role" id="parent" />
                   <label for="parent">Parent</label>
                   <input type="radio" name="role" id="other" />
                   <label for="other">Other</label>
                 </div>
+                <button class="form_button" type="submit">Send message</button>
               </form>
             </div>
           </div>
         </div>
-      </div>
+        <div class="footer_break_line"></div>
+        <p class="footer_rights_para">
+          All rights reserved.Copyright 2020 Lanterna Education ltd, not
+          affiliated with the IBO.
+        </p>
+      </footer>
     </div>
   </body>
 </html>
