@@ -43,7 +43,7 @@
   .nav_right {
     gap: 20px;
     & > div:nth-of-type(1) {
-      @include mixins.font_small-gray;
+      @include mixins.font-small-gray;
       border-right: 1px solid rgb(100, 99, 99);
       padding-right: 10px;
     }
@@ -69,6 +69,12 @@
           background-color: rgb(214, 212, 212);
         }
       }
+    }
+  }
+  .menu_icon {
+    display: none;
+    > img {
+      width: 20px;
     }
   }
 }
@@ -144,19 +150,17 @@
   margin-top: -5px;
   min-height: 150px;
   padding: 4rem 6rem;
-  background: linear-gradient(rgba(17, 19, 16, 0.85), rgba(18, 22, 17));
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(10.5px);
+  background: linear-gradient(rgba(32, 46, 46, 0.9), rgb(32, 46, 46));
 
   > .score_container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     max-width: var.$article_wrapper;
     margin-inline: auto;
     padding: 0 1rem;
     flex-wrap: wrap;
     > .card {
-      width: 150px;
+      width: 175px;
       > .person_icon_container {
         padding-bottom: 3rem;
         border-bottom: 1px solid rgb(80, 78, 78);
@@ -195,7 +199,7 @@
   }
   > .achievements_para {
     text-align: center;
-    @include mixins.font_small-gray();
+    @include mixins.font-small-gray();
   }
   > .achievements_grid {
     margin: 5rem 10rem; /* check here*/
@@ -205,26 +209,97 @@
     justify-content: center;
     gap: 4rem;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    .grid_container {
+      .icon_wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        margin-inline: auto;
+      }
+      .clip_path_icon {
+        position: absolute;
+        z-index: -1;
+        width: 35px;
+        height: 35px;
+        border-radius: 0 0 0 35px;
+      }
+      .color1 {
+        background-color: rgb(233, 229, 28);
+      }
+      .color2 {
+        background-color: rgb(218, 213, 213);
+      }
+      .color3 {
+        background-color: rgba(2, 184, 160, 0.658);
+      }
+      .position1 {
+        bottom: 0;
+        left: 0;
+        border-radius: 0 0 0 35px;
+      }
+      .position2 {
+        top: 0;
+        right: 0;
+        border-radius: 0 35px 0 0;
+      }
+      .position3 {
+        bottom: 0;
+        right: 0;
+        border-radius: 0 0 0 35px;
+      }
+      .position4 {
+        bottom: 0;
+        left: 0;
+        border-radius: 0 35px 0 0;
+      }
+      .position5 {
+        top: 0;
+        right: 0;
+        border-radius: 0 0 35px 0;
+      }
+      .position6 {
+        bottom: 0;
+        right: 0;
+        border-radius: 0 0 35px 0;
+      }
+    }
 
     .achievements_icon {
-      max-width: 40px;
+      max-width: 45px;
     }
     h4 {
-      @include mixins.font_small-gray(
+      @include mixins.font-small-gray(
         $size: 0.9rem,
         $weight: 700,
         $color: rgb(58, 57, 57)
       );
     }
     p {
-      @include mixins.font_small-gray;
+      @include mixins.font-small-gray;
     }
+  }
+}
+.steps_background_wrapper {
+  padding: 0 2rem;
+  height: fit-content;
+  position: relative;
+  > .steps_background {
+    position: absolute;
+    z-index: -1;
+    background-color: rgba(227, 237, 247, 0.856);
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    width: 90%;
+    min-height: 52%;
   }
 }
 .steps_wrapper {
   max-width: var.$article_wrapper;
   min-height: 300px;
-  position: relative;
   margin-inline: auto;
   text-align: center;
   display: flex;
@@ -233,22 +308,15 @@
   > .steps_container {
     padding: 4rem 6rem;
   }
-  > .steps_background {
-    position: absolute;
-    z-index: -1;
-    background-color: rgba(227, 237, 247, 0.856);
-    width: 100%;
-    min-height: 52%;
-    margin-inline: auto;
-  }
+
   .steps_intro {
     max-width: 500px;
     margin-inline: auto;
     h3 {
-      @include mixins.font_small-gray(1.3rem, 700, rgb(39, 39, 39));
+      @include mixins.font-small-gray(1.3rem, 700, rgb(39, 39, 39));
     }
     p {
-      @include mixins.font_small-gray;
+      @include mixins.font-small-gray;
     }
   }
   .steps_flex {
@@ -257,16 +325,16 @@
     flex-wrap: wrap;
     flex: 1;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
     > div {
       max-width: 250px;
       text-align: left;
       line-height: 1.4rem;
       > .placeholder_text_container {
-        @include mixins.font_small-gray(1rem, 700, rgb(68, 67, 67));
+        @include mixins.font-small-gray(1rem, 700, rgb(68, 67, 67));
         padding: 0 10px;
         > .steps_header_para {
-          @include mixins.font_small-gray;
+          @include mixins.font-small-gray;
         }
       }
       > .placeholder_container {
@@ -309,7 +377,7 @@
     border: none;
     padding: 1em 2em;
     border-radius: 20px;
-    @include mixins.font_small-gray(0.7rem, 600, rgb(61, 60, 60));
+    @include mixins.font-small-gray(0.7rem, 600, rgb(61, 60, 60));
     &:hover {
       background-color: rgb(214, 201, 16);
       cursor: pointer;
@@ -334,7 +402,7 @@
     padding: 0 6rem;
     height: fit-content;
     & > p {
-      @include mixins.font_small-gray(1.4rem, 800, rgb(54, 53, 53));
+      @include mixins.font-small-gray(1.4rem, 800, rgb(54, 53, 53));
       line-height: 1rem;
       > .star {
         color: green;
@@ -350,17 +418,17 @@
       }
     }
     & > p:nth-of-type(1) {
-      @include mixins.font_small-gray;
+      @include mixins.font-small-gray;
     }
   }
   > .testimonials_card_container {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     padding: 2rem 6rem;
     > .testimonial_card {
-      width: 250px;
+      // width: 300px;
       height: fit-content;
-      padding: 1rem 2rem;
+      padding: 1rem 1rem;
       border: 1px solid rgba(158, 157, 157, 0.5);
       border-radius: 5px;
       transition: box-shadow 200ms, transform 200ms ease-in;
@@ -369,7 +437,7 @@
         transform: scale(1.001);
       }
       > p {
-        @include mixins.font_small-gray($weight: 600);
+        @include mixins.font-small-gray($weight: 600);
         padding: 10px 0;
         &::before {
           content: "\201C";
@@ -380,18 +448,21 @@
       > .testimaonial_rating_container {
         display: flex;
         border-top: 1px solid rgba(143, 141, 141, 0.5);
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: baseline;
+        text-align: center;
         > .rating {
-          @include mixins.font_small-gray;
+          @include mixins.font-small-gray($size: 0.6rem, $weight: 600);
           padding: 1rem 0;
+          flex: 1;
         }
         .star {
           color: green;
           font-size: 1rem;
         }
         > .testimonial_author {
-          @include mixins.font_small-gray(0.7rem, 700, rgb(44, 44, 44));
+          flex: 1;
+          @include mixins.font-small-gray(0.7rem, 700, rgb(44, 44, 44));
           margin-inline: auto;
         }
       }
@@ -404,7 +475,7 @@
   text-underline-offset: 10px;
 }
 #advisor_tag {
-  @include mixins.font_small-gray(1.6rem, 700, rgb(46, 45, 45));
+  @include mixins.font-small-gray(1.6rem, 700, rgb(46, 45, 45));
 }
 
 .footer {
@@ -439,7 +510,7 @@
         color: rgb(231, 231, 231);
       }
       > div {
-        @include mixins.font_small-gray();
+        @include mixins.font-small-gray();
         font-weight: 600;
       }
       .footer_icon_flex {
@@ -453,7 +524,7 @@
       }
       .form_button {
         align-self: flex-start;
-        @include mixins.font_small-gray(0.7rem, 600, rgb(53, 52, 52));
+        @include mixins.font-small-gray(0.7rem, 600, rgb(53, 52, 52));
         background-color: rgb(226, 211, 5);
         border: none;
         margin-top: 10px;
@@ -515,7 +586,7 @@
     background-color: gray;
   }
   .footer_rights_para {
-    @include mixins.font_small-gray;
+    @include mixins.font-small-gray;
     max-width: fit-content;
     padding: 0 1rem;
     margin-inline: auto;
@@ -536,6 +607,9 @@
   .nav_links,
   .nav_right {
     display: none !important;
+  }
+  .menu_icon {
+    display: block !important;
   }
   .intro_right {
     > div:nth-of-type(1) {

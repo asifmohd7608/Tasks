@@ -75,6 +75,12 @@
 .navbar .nav_right .nav_book > .book_now_btn:active {
   background-color: rgb(214, 212, 212);
 }
+.navbar .menu_icon {
+  display: none;
+}
+.navbar .menu_icon > img {
+  width: 20px;
+}
 
 .intro {
   max-width: 1000px;
@@ -151,20 +157,18 @@
   margin-top: -5px;
   min-height: 150px;
   padding: 4rem 6rem;
-  background: linear-gradient(rgba(17, 19, 16, 0.85), rgb(18, 22, 17));
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(10.5px);
+  background: linear-gradient(rgba(32, 46, 46, 0.9), rgb(32, 46, 46));
 }
 .gradient > .score_container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   max-width: 1000px;
   margin-inline: auto;
   padding: 0 1rem;
   flex-wrap: wrap;
 }
 .gradient > .score_container > .card {
-  width: 150px;
+  width: 175px;
 }
 .gradient > .score_container > .card > .person_icon_container {
   padding-bottom: 3rem;
@@ -214,8 +218,63 @@
   gap: 4rem;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
+.achievements > .achievements_grid .grid_container .icon_wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  margin-inline: auto;
+}
+.achievements > .achievements_grid .grid_container .clip_path_icon {
+  position: absolute;
+  z-index: -1;
+  width: 35px;
+  height: 35px;
+  border-radius: 0 0 0 35px;
+}
+.achievements > .achievements_grid .grid_container .color1 {
+  background-color: rgb(233, 229, 28);
+}
+.achievements > .achievements_grid .grid_container .color2 {
+  background-color: rgb(218, 213, 213);
+}
+.achievements > .achievements_grid .grid_container .color3 {
+  background-color: rgba(2, 184, 160, 0.658);
+}
+.achievements > .achievements_grid .grid_container .position1 {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 0 0 35px;
+}
+.achievements > .achievements_grid .grid_container .position2 {
+  top: 0;
+  right: 0;
+  border-radius: 0 35px 0 0;
+}
+.achievements > .achievements_grid .grid_container .position3 {
+  bottom: 0;
+  right: 0;
+  border-radius: 0 0 0 35px;
+}
+.achievements > .achievements_grid .grid_container .position4 {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 35px 0 0;
+}
+.achievements > .achievements_grid .grid_container .position5 {
+  top: 0;
+  right: 0;
+  border-radius: 0 0 35px 0;
+}
+.achievements > .achievements_grid .grid_container .position6 {
+  bottom: 0;
+  right: 0;
+  border-radius: 0 0 35px 0;
+}
 .achievements > .achievements_grid .achievements_icon {
-  max-width: 40px;
+  max-width: 45px;
 }
 .achievements > .achievements_grid h4 {
   font-size: 0.9rem;
@@ -228,10 +287,25 @@
   color: rgb(112, 110, 110);
 }
 
+.steps_background_wrapper {
+  padding: 0 2rem;
+  height: fit-content;
+  position: relative;
+}
+.steps_background_wrapper > .steps_background {
+  position: absolute;
+  z-index: -1;
+  background-color: rgba(227, 237, 247, 0.856);
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: 90%;
+  min-height: 52%;
+}
+
 .steps_wrapper {
   max-width: 1000px;
   min-height: 300px;
-  position: relative;
   margin-inline: auto;
   text-align: center;
   display: flex;
@@ -239,14 +313,6 @@
 }
 .steps_wrapper > .steps_container {
   padding: 4rem 6rem;
-}
-.steps_wrapper > .steps_background {
-  position: absolute;
-  z-index: -1;
-  background-color: rgba(227, 237, 247, 0.856);
-  width: 100%;
-  min-height: 52%;
-  margin-inline: auto;
 }
 .steps_wrapper .steps_intro {
   max-width: 500px;
@@ -268,7 +334,7 @@
   flex-wrap: wrap;
   flex: 1;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
 }
 .steps_wrapper .steps_flex > div {
   max-width: 250px;
@@ -375,13 +441,12 @@
 }
 .testimonials > .testimonials_card_container {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   padding: 2rem 6rem;
 }
 .testimonials > .testimonials_card_container > .testimonial_card {
-  width: 250px;
   height: fit-content;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   border: 1px solid rgba(158, 157, 157, 0.5);
   border-radius: 5px;
   transition: box-shadow 200ms, transform 200ms ease-in;
@@ -404,20 +469,23 @@
 .testimonials > .testimonials_card_container > .testimonial_card > .testimaonial_rating_container {
   display: flex;
   border-top: 1px solid rgba(143, 141, 141, 0.5);
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: baseline;
+  text-align: center;
 }
 .testimonials > .testimonials_card_container > .testimonial_card > .testimaonial_rating_container > .rating {
-  font-size: 0.8rem;
-  font-weight: 500;
+  font-size: 0.6rem;
+  font-weight: 600;
   color: rgb(112, 110, 110);
   padding: 1rem 0;
+  flex: 1;
 }
 .testimonials > .testimonials_card_container > .testimonial_card > .testimaonial_rating_container .star {
   color: green;
   font-size: 1rem;
 }
 .testimonials > .testimonials_card_container > .testimonial_card > .testimaonial_rating_container > .testimonial_author {
+  flex: 1;
   font-size: 0.7rem;
   font-weight: 700;
   color: rgb(44, 44, 44);
@@ -564,6 +632,9 @@
   .nav_links,
   .nav_right {
     display: none !important;
+  }
+  .menu_icon {
+    display: block !important;
   }
   .intro_right > div:nth-of-type(1) {
     text-align: center !important;
