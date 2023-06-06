@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git Commands</title>
+  </head>
+  <body>
+    <h1>Git</h1>
+    <h2>git initialization</h2>
+    <ul>
+      <li><code>git init</code></li>
+      <li><code>git clone &lt;url&gt;</code></li>
+      <li>
+        <code
+          >git remote add &lt;remote_repo_name&gt; &lt;remote_repo_url&gt;</code
+        >
+      </li>
+      <li><code>git config --global user.name &lt;name&gt;</code></li>
+      <li><code>git config --global user.email &lt;email&gt;</code></li>
+    </ul>
+    <h2>git commit</h2>
+    <ul>
+      <li><code>git commit -m 'message'</code></li>
+      <li>
+        multiline commits
+        <ul>
+          <li><code>git commit</code> opens text editor</li>
+          <li>
+            <code>git commit -m "Commit Title" -m "Commit Description"</code>
+            each -m starts in a new line
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h2>git push</h2>
+    <ul>
+      <li>
+        <code>git push -u &lt;remote_name&gt; &lt;local_branch_name&gt;</code>
+      </li>
+    </ul>
+
+    <h2>git log</h2>
+    <ul>
+      <li>
+        a utility tool to review and read a history of everything that happens
+        to a repository.
+      </li>
+      <li><code>git log</code></li>
+      <li><code>git log --oneline</code> one commit per line.</li>
+      <li>
+        <code>git log --stat</code> displays the files that have been modified,
+        the number of lines that have been added or removed.
+      </li>
+      <li>
+        <code>git log --after="yy-mm-dd"</code> display all the commits made
+        after the given date.
+      </li>
+    </ul>
+    <h2>view a commit</h2>
+    <ul>
+      <li><code>git show &lt;hash&gt;</code> view a specific commit</li>
+    </ul>
+    <h2>git compare</h2>
+    <ul>
+      <li>
+        <code>git diff --staged</code> lists out the changes between the staged
+        area and last commit.
+      </li>
+      <li>
+        <code>git diff --staged &lt;file_name&gt;</code> compares the changes of
+        the specified file between staged area and last commit
+      </li>
+      <li>
+        <code>git diff &lt;branch_name1&gt; &lt;branch_name2&gt;</code> compare
+        the changes from the first branch with changes from the second branch.
+      </li>
+      <li>
+        <code
+          >git diff &lt;branch_name1&gt; &lt;branch_name2&gt;
+          &lt;file_name&gt;</code
+        >
+        compares the changes of the specified file between two branches
+      </li>
+      <li>
+        <code>git diff &lt;commit_hash&gt; &lt;commit_hash&gt;</code> compares
+        the changes between two commits.
+      </li>
+      <li>
+        <code
+          >git diff &lt;commit_hash&gt; &lt;commit_hash&gt;
+          &lt;file_name&gt;</code
+        >
+        compares the changes in a file between two commits.
+      </li>
+    </ul>
+  </body>
+</html>
