@@ -103,5 +103,40 @@
         only
       </li>
     </ul>
+    <h2>amend commits</h2>
+    <ul>
+      <li>to change commits</li>
+      <li><code>git commit --amend</code></li>
+    </ul>
+    <h2>retrieve old versions</h2>
+    <ul>
+      <li>two methods</li>
+      <li>
+        checkout method
+        <ul>
+          <li>
+            <code>git checkout &lt;commit-hash&gt; &lt;filepath&gt;</code> this
+            retrieves old version of the specified file
+          </li>
+          <li>
+            <code>git checkout &lt;commit-hash&gt;</code> retrieves all files
+            from the specified commit
+          </li>
+        </ul>
+      </li>
+      <li>
+        reset method
+        <ul>
+          <li>
+            <code>git reset &lt;commit-hash&gt;</code> reverts to old commit
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h2>revert a commit</h2>
+    <ul>
+      <li><code>git revert &lt;commit_hash&gt;</code></li>
+      <li>reverts a change made in that particular commit</li>
+    </ul>
   </body>
 </html>
