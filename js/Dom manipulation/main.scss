@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 1rem 0;
+  display: inline-block;
+
+  > .coloured_div {
+    width: 30vw;
+    padding: 0.5rem 0;
+    border-radius: 10px;
+    border: 2px solid rgb(224, 224, 224);
+    text-align: center;
+  }
+}
