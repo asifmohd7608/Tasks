@@ -1,0 +1,69 @@
+Relationships
+
+	-one to one :- one row of table1 to one row of table 2
+	-one to many :- one row of table 1 to many rows of table 2
+	-many to one:- similar to one to many, but opposite
+	-many to many:- may rows of table one to many rows of table 2
+
+Data Types
+
+	string
+		CHAR(size)-		fixed length string that can contain numbers, letters, and special characters.
+		 		Its size can be 0 to 255 characters. Default is 1.
+
+		VARCHAR(size)-	variable length string that can contain numbers, letters, and special characters.
+				Its size can be from 0 to 65535 characters.
+
+		TEXT(Size)-	It holds a string that can contain a maximum length of 255 characters.
+
+		ENUM-		It is used when a string object having only one value, chosen from a list of 
+				possible values. It contains 65535 values in an ENUM list. If you insert a value
+				that is not in the list, a blank value will be inserted.
+
+		SET-		It is used to specify a string that can have 0 or more values, chosen from a list
+				of possible values. You can list up to 64 values at one time in a SET list.
+
+	Numeric
+
+		INT-		It is used for the integer value. Its signed range varies from -2147483648 to 
+				2147483647 and unsigned range varies from 0 to 4294967295. The size parameter 
+				specifies the max display width that is 255.
+
+		FLOAT(size, d)-	t is used to specify a floating point number. Its size parameter specifies the
+				total number of digits. The number of digits after the decimal point is specified 
+				by d parameter.
+
+		BOOL-		It is used to specify Boolean values true and false. Zero is considered as false, 
+				and nonzero values are considered as true.
+
+	 Date and Time
+
+		DATE-		 It is used to specify date format YYYY-MM-DD. Its supported range is from 
+				'1000-01-01' to '9999-12-31'.
+
+		DATETIME(fsp)-	It is used to specify date and time combination. Its format is YYYY-MM-DD hh:mm:ss.
+				Its supported range is from '1000-01-01 00:00:00' to 9999-12-31 23:59:59'.
+
+		TIME(fsp)-	It is used to specify the time format. Its format is hh:mm:ss. Its supported range 
+				is from '-838:59:59' to '838:59:59'
+
+		YEAR-		It is used to specify a year in four-digit format. Values allowed in four digit 
+				format from 1901 to 2155, and 0000.
+
+
+
+
+
+
+
+
+
+
+
+
+USE db;
+
+SELECT - to select columns from a  table;
+FROM - to specify the table from which the column is to be selected;
+WHERE - to apply some sort of condition;
+ORDER BY - to apply some kind of sorting;
